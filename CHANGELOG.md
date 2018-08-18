@@ -1,7 +1,5 @@
 # Change Log
-All notable changes to the "myjssnippets" extension will be documented in this file.
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+#### ver0.1.0 (2018/8/19)
 
-## [Unreleased]
-- Initial release
+    初始版本。

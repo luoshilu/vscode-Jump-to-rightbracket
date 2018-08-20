@@ -17,40 +17,43 @@ export default class FoundedRightBracket {
     if (!editor) {
       return this.initPosition;
     }
+    console.log(this.foundedNum);
+
     let nowPosition = position || this.initPosition;
-    let nextColPosition = nowPosition.with(
-      nowPosition.line,
-      nowPosition.character + 1
-    );
+    let nextColPosition;
 
     // totalLine
     var totalLine = editor.document.lineCount;
     if (nowPosition.line === totalLine) {
-      if (this.foundedNum > 0) {
-        return this.initPosition;
+      return this.initPosition;
+    }
+
+    // foundInline
+    let nextCharact;
+    for (; nextCharact !== ""; ) {
+      nextColPosition = nowPosition.with(
+        nowPosition.line,
+        nowPosition.character + 1
+      );
+      let rangeNext = new vscode.Range(nowPosition, nextColPosition);
+      nextCharact = editor.document.getText(rangeNext);
+
+      if (nextCharact === "") {
+        // go next line
+        nowPosition = nowPosition.with(nowPosition.line + 1, 0);
+        return this.foundNext(nowPosition);
+      }
+
+      if (this.rightBrackets.indexOf(nextCharact) === -1) {
+        if (this.foundedNum > 0) {
+          return this.initPosition;
+        }
       } else {
-        return this.initPosition;
+        this.foundedNum++;
+        this.initPosition = nextColPosition;
       }
+      nowPosition = nextColPosition;
     }
-
-    let range = new vscode.Range(nowPosition, nextColPosition);
-    let nextCharact = editor.document.getText(range);
-
-    if (nextCharact === "") {
-      // go next line
-      nowPosition = nowPosition.with(nowPosition.line + 1, 0);
-      return this.foundNext(nowPosition);
-    }
-
-    if (this.rightBrackets.indexOf(nextCharact) === -1) {
-      if (this.foundedNum > 0) {
-        return this.initPosition;
-      }
-      return this.foundNext(nextColPosition);
-    } else {
-      this.foundedNum++;
-      this.initPosition = nextColPosition;
-      return this.foundNext(nextColPosition);
-    }
+    return this.initPosition;
   }
 }

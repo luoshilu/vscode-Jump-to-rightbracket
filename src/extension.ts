@@ -3,7 +3,7 @@ import * as vscode from "vscode";
 import foundedRightBracket from "./foundedRightBracket";
 export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
-    "extension.jumpRightBacket",
+    "extension.jumpRightBracket",
     () => {
       let editor = vscode.window.activeTextEditor;
       if (!editor) {

@@ -12,11 +12,15 @@ Vscode Market: [https://marketplace.visualstudio.com/items?itemName=luoshilu.jum
 
 ![jumprightbracket](https://user-images.githubusercontent.com/16523045/44298243-162ab000-a2a5-11e8-83cc-2c1c0f0869ec.gif)
 
+在执行跳转到右括号命令后，光标会跳转到当前光标后的第一个右括号，如果右括号后还有其它右括号，则会跳到其它右括号后。
+
 After executing the command of "jumpRightBracket", the cursor will jump to the first hit of parenthesis.If the brackets are adjacent to each other, then the cursor will jump to the last.
 
 ## Use
 
-first, you need to open keybingings. json in the vscode, and bind the key combination for command of "extension.jumpRightBracket".
+首先，打开 keybingings.json 文件，为 extension.jumpRightBracket 命令添加绑定的按键组合。插件默认有 shift+enter。
+
+first, open keybingings.json in vscode, and bind the key combination for command of "extension.jumpRightBracket", this default is "shift+enter".
 
 ```
   {
@@ -28,7 +32,9 @@ first, you need to open keybingings. json in the vscode, and bind the key combin
 
 ## config
 
-In the "user settings"， you can customize some characters, such as ")}", the default is ")}]>".
+在用户配置文件中，你可以自定义一些匹配字符，比如 ")}"，插件默认有 ")}]>"。
+
+In the "user settings.json"， you can customize some characters, such as ")}", the default is ")}]>".
 
 > "jumpRightBrackets.rightBrackets": ")}"
 

@@ -38,4 +38,10 @@ In the "user settings.json"， you can customize some characters, such as ")}", 
 
 > "jumpRightBrackets.rightBrackets": ")}"
 
+是否跳过相邻的括号? 默认不跳过.
+
+does skip the adjacent brackets? the default is false;
+
+> "jumpRightBrackets.adjoin": "false"
+
 **Enjoy it!**

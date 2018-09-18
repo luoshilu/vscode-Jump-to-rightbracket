@@ -17,8 +17,6 @@ export default class FoundedRightBracket {
     if (!editor) {
       return this.initPosition;
     }
-    console.log(this.foundedNum);
-
     let nowPosition = position || this.initPosition;
     let nextColPosition;
 
@@ -51,6 +49,10 @@ export default class FoundedRightBracket {
       } else {
         this.foundedNum++;
         this.initPosition = nextColPosition;
+        // founded yet, continue?
+        if (!this.config.adjoin) {
+          return this.initPosition;
+        }
       }
       nowPosition = nextColPosition;
     }

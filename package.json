@@ -2,7 +2,7 @@
   "name": "jump-to-rightbacket",
   "displayName": "jump-to-rightbacket",
   "description": "Jump to right bracket when you are coding",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "luoshilu",
   "repository": {
     "type": "git",
@@ -40,6 +40,11 @@
           "type": "string",
           "default": "}])>",
           "description": "right backets of your custom."
+        },
+        "jumpRightBrackets.adjoin": {
+          "type": "boolean",
+          "default": false,
+          "description": "Skip the adjacent brackets."
         }
       }
     }

@@ -1,12 +1,12 @@
-# Jump-to-right-bracket
+# vscode-Jump-to-rightbracket
 
 [![Version](https://vsmarketplacebadge.apphb.com/version/luoshilu.jump-to-rightbacket.svg)](https://marketplace.visualstudio.com/items?itemName=luoshilu.jump-to-rightbacket)
 [![Installs](https://vsmarketplacebadge.apphb.com/installs/luoshilu.jump-to-rightbacket.svg)](https://marketplace.visualstudio.com/items?itemName=luoshilu.jump-to-rightbacket)
 [![Ratings](https://vsmarketplacebadge.apphb.com/rating/luoshilu.jump-to-rightbacket.svg)](https://vsmarketplacebadge.apphb.com/rating/luoshilu.jump-to-rightbacket.svg)
 
-## Jump to right bracket when you are coding!
+## Jump to rightbracket when you are coding!
 
-GitHub: [https://github.com/luoshilu/vscode-Jump-to-right-bracket](https://github.com/luoshilu/vscode-Jump-to-right-bracket)
+GitHub: [https://github.com/luoshilu/vscode-Jump-to-rightbracket](https://github.com/luoshilu/vscode-Jump-to-rightbracket)
 
 Vscode Market: [https://marketplace.visualstudio.com/items?itemName=luoshilu.jump-to-rightbacket](https://marketplace.visualstudio.com/items?itemName=luoshilu.jump-to-rightbacket)
 
